@@ -20,9 +20,10 @@
       "encoding": {
         "longitude": {"field": "lng", "type": "quantitative"},
         "latitude": {"field": "lat", "type": "quantitative"},
-        "color": {"scale": {"scheme": "reds"}}
+        "color": {
+          "scale": {"scheme": "reds"}
+        }
       }
     }
-  ],
-  "config": {}
+  ]
 }
