@@ -19,7 +19,7 @@
         "longitude": {"field": "longitude", "type": "quantitative"},
         "latitude": {"field": "latitude", "type": "quantitative"},
         "color": {
-          "field": "Num_of_Circuit_Usage",
+          "field": "Num of Circuit Usage",
           "type": "quantitative",
           "scale": {"scheme": "reds"}
         }
