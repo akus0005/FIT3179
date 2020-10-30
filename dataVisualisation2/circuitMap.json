@@ -12,10 +12,17 @@
     },
     {
       "data": {"url": "https://akus0005.github.io/FIT3179/f1_data.csv"},
-      "mark": {"type": "circle", "tooltip": {"content": "data"}},
+      "mark": {
+        "type": "circle"},
       "encoding": {
         "longitude": {"field": "longitude", "type": "quantitative"},
         "latitude": {"field": "latitude", "type": "quantitative"},
+        "tooltip":[
+          {"field":"name"},
+          {"field":"Num of Circuit Usage"},
+          {"field":"longitude"},
+          {"field":"latitude"}
+        ],
         "color": {
           "field": "Num of Circuit Usage",
           "type": "quantitative",
