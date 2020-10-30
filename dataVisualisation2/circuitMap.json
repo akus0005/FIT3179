@@ -1,9 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
   "width": "container",
-  "title": {"text": "Circuits accross the globe",
-  "subtitle": ["Click on the dot to see the country"],
-  "subtitlePadding": 10},
   "projection": {"type": "equalEarth"},
   "layer": [
     {
