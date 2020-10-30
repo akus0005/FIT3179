@@ -1,7 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
-  "width": 800,
-  "height": 500,
+  "width": "container",
   "description": "A simple radial chart with embedded data.",
   "data": {"url": "https://akus0005.github.io/FIT3179/f1_data.csv"},
   "layer": [
