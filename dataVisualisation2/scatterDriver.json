@@ -3,7 +3,7 @@
   "width": "container",
   "title": {"text":"Winner of Each Formula 1 Race",
   "subtitle": ["Use the selection menu to choose the driver name"],
-  "subtitlePadding": 10,
+  "subtitlePadding": 10},
   "data": {"url": "https://akus0005.github.io/FIT3179/f1_data.csv"},
   "params": [
     {
