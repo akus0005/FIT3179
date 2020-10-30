@@ -1,7 +1,9 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
   "width": "container",
-  "title": "Winner of Each Formula 1 Race (2015-2019)",
+  "title": {"text":"Winner of Each Formula 1 Race",
+  "subtitle": ["Use the selection menu to choose the driver name"],
+  "subtitlePadding": 10,
   "data": {"url": "https://akus0005.github.io/FIT3179/f1_data.csv"},
   "params": [
     {
