@@ -1,8 +1,8 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
   "width": "container",
-  "subtitle": {["Click on the dot to see the country"],
-  "subtitlePadding": 10},
+  "subtitle": ["Click on the dot to see the country"],
+  "subtitlePadding": 10,
   "projection": {"type": "equalEarth"},
   "layer": [
     {
