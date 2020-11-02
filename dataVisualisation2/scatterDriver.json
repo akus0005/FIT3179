@@ -1,6 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
-  "width": 800,
+  "width": 820,
   "height": 420,
   "title":{
     "text":"Most Wins (compared to its total time)",
