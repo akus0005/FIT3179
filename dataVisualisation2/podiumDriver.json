@@ -4,8 +4,8 @@
   "height": 450,
   "title":{
     "text":"Most Podiums",
-    "anchor": "start",
-    "fontSize": 25
+    "orient":"top",
+    "fontSize": 20
     },
   "description": "A simple radial chart with embedded data.",
   "data": {"url": "https://akus0005.github.io/FIT3179/f1_data.csv"},
