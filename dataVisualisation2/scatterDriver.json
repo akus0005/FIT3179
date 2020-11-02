@@ -1,0 +1,105 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+  "width": 800,
+  "height": 450,
+  "title": {
+    "text": "Winner of Each Formula 1 Race",
+    "subtitle": ["Use the selection menu to choose the driver name"],
+    "subtitlePadding": 10
+  },
+  "data": {"url": "https://akus0005.github.io/FIT3179/f1_data.csv"},
+  "params": [
+    {
+      "name": "Drivers",
+      "bind": {
+        "input": "select",
+        "options": [
+          null,
+          "Lewis Hamilton",
+          "Nico Rosberg",
+          "Sebastian Vettel",
+          "Daniel Ricciardo",
+          "Valtteri Bottas",
+          "Max Verstappen",
+          "Kimi Raikkonen",
+          "Charles Leclerc"
+        ],
+        "labels": [
+          "Show All",
+          "Lewis Hamilton",
+          "Nico Rosberg",
+          "Sebastian Vettel",
+          "Daniel Ricciardo",
+          "Valtteri Bottas",
+          "Max Verstappen",
+          "Kimi Raikkonen",
+          "Charles Leclerc"
+        ],
+        "name": "Drivers: "
+      }
+    }
+  ],
+  "transform": [
+    {"filter": "datum.round > 0"},
+    {"filter": "datum.lap_time_in_seconds > 0"},
+    {"filter": "Drivers == null || datum.round_winner== Drivers"}
+  ],
+  "selection": {
+    "round_winner": {
+      "type": "multi",
+      "fields": ["round_winner"],
+      "bind": "legend"
+    }
+  },
+  "mark": "circle",
+  "encoding": {
+    "x": {
+      "field": "round",
+      "type": "quantitative",
+      "title": "Round number",
+      "sort": "ascending",
+      "axis": {"tickCount": 7},
+      "scale": {"type": "linear", "domain": [0, 22]}
+    },
+    "y": {
+      "field": "lap_time_in_seconds",
+      "type": "quantitative",
+      "title": "Total time (seconds)",
+      "axis": {"tickCount": 6}
+    },
+    "color": {
+      "field": "round_winner",
+      "type": "nominal",
+      "scale": {
+        "domain": [
+          "Lewis Hamilton",
+          "Nico Rosberg",
+          "Sebastian Vettel",
+          "Daniel Ricciardo",
+          "Valtteri Bottas",
+          "Max Verstappen",
+          "Kimi Raikkonen",
+          "Charles Leclerc"
+        ],
+        "order": {"field": "round_winner", "sort": "ascending"}
+      }
+    },
+    "tooltip": [
+      {"field": "round_winner", "title": "Driver", "type": "nominal"},
+      {
+        "field": "round",
+        "title": "Round",
+        "type": "quantitative",
+        "format": ","
+      },
+      {
+        "field": "lap_time_in_seconds",
+        "title": "Lap time",
+        "type": "quantitative",
+        "format": ","
+      },
+      {"field": "year", "title": "Year", "type": "quantitative", "format": ","}
+    ]
+  },
+  "config": {}
+}
