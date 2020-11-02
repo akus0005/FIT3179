@@ -1,7 +1,12 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
-  "width": 420,
-  "height": 450,
+  "width": 800,
+  "height": 420,
+  "title":{
+    "text":"Most Wins (compared to its total time)",
+    "orient":"top",
+    "fontSize": 20
+    },
   "background": "#fcf1f1",
   "data": {"url": "https://akus0005.github.io/FIT3179/f1_data.csv"},
   "params": [
