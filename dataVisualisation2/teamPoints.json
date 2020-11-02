@@ -1,0 +1,44 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+  "width": 800,
+  "height": 450,
+  "title": {
+    "text": "Team With Most Points Over The Years",
+    "orient": "top",
+    "fontSize": 20
+  },
+  "data": {"url": "https://akus0005.github.io/FIT3179/f1_data.csv"},
+  "mark": "bar",
+  "transform": [
+    {"filter": "datum.const_points != 0"},
+    {"filter": "datum.constructors != 0"},
+    {"filter": "datum.constructor_year <= top_constructor_year"}
+  ],
+  "params": [
+    {
+      "name": "top_constructor_year",
+      "value": "2015",
+      "bind": {
+        "input": "range",
+        "min": 2015,
+        "max": 2019,
+        "step": 1,
+        "name": "Slide to choose the Year"
+      }
+    }
+  ],
+  "encoding": {
+    "x": {
+      "aggregate": "sum",
+      "field": "const_points",
+      "title": "Total Constructor Points"
+    },
+    "y": {"field": "constructors", "title": "Constructor Name"},
+    "color": {"field": "constructor_year"},
+    "tooltip": [
+      {"field": "const_points", "type": "quantitative", "format": ","},
+      {"field": "year", "type": "quantitative", "format": ","}
+    ]
+  },
+  "config": {"background": "#fcf1f1"}
+}
